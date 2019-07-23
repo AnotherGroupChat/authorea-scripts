@@ -21,3 +21,7 @@
 ## 0.0.7
 
 - Fixed handling of captions.
+
+## 0.0.8
+
+- Added proper abstract formatting.
