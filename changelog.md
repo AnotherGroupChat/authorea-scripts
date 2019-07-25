@@ -25,3 +25,7 @@
 ## 0.0.8
 
 - Added proper abstract formatting.
+
+## 0.0.9
+
+- Added greek to babel

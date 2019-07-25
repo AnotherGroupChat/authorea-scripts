@@ -376,7 +376,7 @@ def main():
                              ' files in. Default to the current directory.')
     parser.add_argument('--build-dir', '-d', default='authorea_build',
                         help='the directory to build the paper in')
-    parser.add_argument('--latex', '-l', default='pdflatex',
+    parser.add_argument('--latex', '-l', default='xelatex',
                         help='The executable to use for the latex build step.')
     parser.add_argument('--bibtex', '-b', default='bibtex',
                         help='The executable to use for the bibtex build step.')
