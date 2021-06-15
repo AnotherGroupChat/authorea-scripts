@@ -169,7 +169,7 @@ def get_figure_string(filename, localdir, inputdir, flatten=False, copyto=False)
     elif os.path.exists(os.path.join(localdir, figdir, 'caption.html')):
         caption = convert_file(
             os.path.join(localdir, figdir, 'caption.html'),
-            'latex', format='html+tex_math_dollars', filters=['stripreftags']
+            'latex', format='html+tex_math_dollars', filters=[]
         )
     else:
         caption = ''
@@ -298,12 +298,12 @@ def build_authorea_latex(localdir, builddir, latex_exec, bibtex_exec, outname,
                 # add abstract to title content
                 html_to_tex = convert_file(
                     os.path.join(localdir, ls),
-                    'latex', format='html+tex_math_dollars', filters=['stripreftags'])
+                    'latex', format='html+tex_math_dollars', filters=[])
                 sectioninputs.append(r'\begin{abstract}' + '\n' + html_to_tex + r'\end{abstract}')
             elif ls.endswith('.html') or ls.endswith('.htm'):
                 html_to_tex = convert_file(
                     os.path.join(localdir, ls),
-                    'latex', format='html+tex_math_dollars', filters=['stripreftags'])
+                    'latex', format='html+tex_math_dollars', filters=[])
                 sectioninputs.append(html_to_tex)
             elif ls.endswith('.md'):
                 md_to_tex = convert_file(
